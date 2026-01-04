@@ -11,6 +11,10 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
     "title": {
       "type": "string",
       "required": true
@@ -25,21 +29,7 @@
       "type": "decimal",
       "required": true
     },
-    "base_currency": {
-      "type": "enumeration",
-      "enum": [
-        "VND",
-        "USD"
-      ]
-    },
-    "discount_type": {
-      "type": "enumeration",
-      "enum": [
-        "percent",
-        "fixed"
-      ]
-    },
-    "discount_value": {
+    "price_after_discount": {
       "type": "decimal"
     },
     "discount_start_at": {
@@ -47,16 +37,6 @@
     },
     "discount_end_at": {
       "type": "datetime"
-    },
-    "main_image": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
     },
     "gallery": {
       "type": "media",
